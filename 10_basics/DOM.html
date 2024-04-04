@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM learning</title>
+    <style>
+        .bg-black{
+            background-color:rgb(33, 33, 33);
+            color: rgb(255, 255, 255);
+        }
+    </style>
+</head>
+<body   class="bg-black"> 
+    <!-- <div>
+        <h1 id="title" class="heading">
+<p>Hello kaise hai <span style="display: block;">aap log mai</span> thik hu </p>
+        </h1>
+        <h2>hii kaise hai anurag bhaiya thik hona </h2>
+        <h2>hii kaise hai anurag bhaiya thik hona </h2>
+        <h2>hii kaise hai anurag bhaiya thik hona </h2>
+        <h2>hii kaise hai anurag bhaiya thik hona </h2>
+    <ul>
+        
+        <li class="list-item">mango</li>
+        <li class="list-item">mango</li>
+        <li class="list-item">mango</li>
+    </ul>
+    </div> -->
+
+<div class="parent">
+    <div class="day">Monday</div>
+    <div class="day">Tuesday</div>
+    <div class="day">Wednesday</div>
+    <div class="day">Thusday</div>
+    <h1></h1>
+</div>
+
+
+<script>
+    const parent=document.querySelector('.parent')
+    console.log(parent);
+    console.log(parent.children[1].innerHTML);
+    
+
+    // for (let i = 0; i < parent.children.length; i++) {
+    //     console.log(parent.children[i].innerHTML);
+        
+    // }
+
+    // parent.children[0].style.color="pink"
+    // parent.children[1].style.color="orange"
+    // parent.children[2].style.color="yellow"
+    // parent.children[3].style.color="red"
+
+    // console.log(parent.firstElementChild);
+    // console.log(parent.lastElementChild);
+
+
+    // const dayOne=document.querySelector('.day')
+    // console.log(dayOne);
+    // console.log(dayOne.parentElement);
+
+    const div=document.createElement('div')
+    console.log(div);
+    div.className="main"
+    div.id=Math.round(Math.random()*10+1)
+    div.setAttribute("title","generated title")
+    div.style.backgroundColor='green'
+    div.style.padding='12px'
+    div.innerHTML="chai aur code"
+
+    const addText=document.createTextNode("chai aur code")
+    div.appendChild(addText)
+    
+
+    document.body.appendChild(div)
+</script>
+</body>
+</html>

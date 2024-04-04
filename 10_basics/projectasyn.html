@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+        body{
+            background-color: rgb(24 24 27);
+            color: #fff;
+        }
+
+        h1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 25px;
+        }
+        button{
+            padding: 10px;
+            font-size: 25px;
+            color: #fff;
+          
+            border: none;
+            
+            cursor: pointer;
+            border-radius: 5px;
+            background-color: rgb(185 28 28);  
+            margin: 25px;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Anurag with javascript</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+const SayAnurag=function(){
+    console.log("anurag");
+}
+
+const changeText=function(){
+    document.querySelector('h1').innerHTML="best js series"
+}
+
+setTimeout(SayAnurag,5000)
+setTimeout(changeText,5000)
+</script>
+</html>

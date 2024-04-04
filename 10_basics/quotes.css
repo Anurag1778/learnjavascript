@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(15 23 42);
+    color: #fff;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+	background-color: rgb(156 163 175);       color: rgb(15 23 42);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+	background-color: rgb(156 163 175);}
+
+#quoteDisplay {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgb(51 65 85);
+    border-radius: 5px;
+}
