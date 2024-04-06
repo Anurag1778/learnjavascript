@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api in javascript</title>
+</head>
+<body>
+    <script>
+    async function apiCall(){
+let result= await fetch("https://jsonplaceholder.typicode.com/users")
+let data = await result.json()
+document.getElementById("username").innerHTML=data.map((user)=>
+        `<tr>
+            <td>${user.name}</td>
+            <td>${user.email}</td>
+            <td>${user.username}</td>
+            <td>${user.website}</td>
+            <td>${user.phone}</td>
+            
+            </tr>`
+     ).join("")
+}
+
+     apiCall()
+     
+    </script>
+
+    <h1>API call in javascript</h1>
+    <table border="1">
+<thead>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>UserName</th>
+        <th>Website</th>
+        <th>Phone</th>
+    </tr>
+</thead>
+<tbody id="username"></tbody>
+    </table>
+</body>
+</html>
